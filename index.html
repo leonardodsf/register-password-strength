@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Password Field Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="jquery.passwordstrength.js"></script>
+</head>
+
+<body>
+  <form>
+    <img src="images/user2.png">
+    <div class="input-box">
+      <span><i class="fa fa-user-o"></i></span>
+      <input type="text" placeholder="Username" required>
+    </div>
+    <div class="input-box">
+      <span><i class="fa fa-envelope-o"></i></span>
+      <input type="email" placeholder="E-mail" required>
+    </div>
+    <div class="input-box">
+      <span><i class="fa fa-key"></i></span>
+      <input type="password" id="password" placeholder="Password" required>
+    </div>
+    <button type="submit"><i class="fa fa-sign-in"></i>Register</button>
+  </form>
+
+  <script type="text/javascript">
+    $(function() {
+        $("#password").passwordStrength();
+    });
+</script>
+
+</body>
+
+</html>
